@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+
+*{margin: 0;padding: 0;}
+
+body,html{width: 100%;height: 100%;text-align: center;background-image: url('../img/background.png'); background-repeat: no-repeat; background-size: cover; font-family: Arial, Helvetica, sans-serif;}
+a{text-decoration: none;}button:focus,input:focus,textarea:focus{outline:none;}
+button{border:none;cursor:pointer;}
+input,textarea{border:none;}
+ul{list-style:none;}
+/*Botões deletar e editar das tabelas */
+.editar{
+    background:yellow;
+    padding:8px;
+    font-size:15px;
+    color:black;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    text-decoration: none;
+    
+}
+.editar:hover{
+    background:gold;
+}
+#deletar{
+    background:firebrick;
+    padding:8px;
+    font-size:15px;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+#deletar:hover{
+    background:red;
+}
+    
+
+/* PAGINA LOGIN/CADASTRO */
+@media screen and (max-width:1254px){
+    #img_home{
+        display:none;
+    }
+    /*LOGIN*/
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        transform:translate(-50%,-50%);
+        top:50%;
+        left:50%;
+        background: rgba(0, 0, 0, 0.85);
+        padding:15px;
+        width:300px;
+        height:auto;
+        color:yellow;
+        border-radius:10px;
+    }
+    .wrapper i{
+        font-size:25px;
+    }
+
+    .wrapper h1{
+        letter-spacing: 0.5px;
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    .wrapper input{
+        margin-bottom:10px;
+        padding:5px;
+        border-radius:10px;
+        width:250px;
+    }
+    .wrapper a{
+        font-size:12px;
+        color:yellow;
+    }
+    .wrapper button{
+        padding: 5px;
+        width:100px;
+        font-size:15px;
+        background-color: yellow;
+        font-weight: bold;
+        border-radius:10px;
+        margin-top:10px;
+    }
+    .wrapper button:hover{
+        background:rgb(230, 226, 7);
+    }
+    .wrapper_off{
+        display: none;
+    }
+    /*################################################*/
+
+    /*Cadastro */
+    .wrapper_cadastro{
+        display:none;
+        position: absolute;
+        align-items: center;
+        top:30%;
+        left:55%;
+        background: rgba(0, 0, 0, 0.9);
+        padding:15px;
+        width:300px;
+        height:auto;
+        color:yellow;
+        border-radius:10px;
+        
+    }
+    .wrapper_cadastro_active{
+        display: block;
+    }
+    .wrapper_cadastro i{
+        font-size:25px;
+    }
+
+    .wrapper_cadastro h1{
+        letter-spacing: 0.5px;
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    .wrapper_cadastro input{
+        margin-bottom:10px;
+        padding:5px;
+        border-radius:10px;
+        width:250px;
+    }
+    .wrapper_cadastro a{
+        font-size:12px;
+        color:yellow;
+    }
+    .wrapper_cadastro button{
+        padding: 5px;
+        width:100px;
+        font-size:15px;
+        background-color: yellow;
+        font-weight: bold;
+        border-radius:10px;
+        margin-top:10px;
+    }
+    .wrapper_cadastro button:hover{
+        background:rgb(230, 226, 7);
+    }
+}
+   
+
+  
+
+
+
+@media screen and (min-width:1255px) {
+    
+    #img_home{
+        width: 778px;
+        transform: translate(-30%, 3%);
+    }
+    /* LOGIN */
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        top:30%;
+        left:55%;
+        background: rgba(0, 0, 0, 0.85);
+        padding:15px;
+        width:300px;
+        height:auto;
+        color:yellow;
+        border-radius:10px;
+    }
+    .wrapper i{
+        font-size:25px;
+    }
+
+    .wrapper h1{
+        letter-spacing: 0.5px;
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    .wrapper input{
+        margin-bottom:10px;
+        padding:5px;
+        border-radius:10px;
+        width:250px;
+    }
+    .wrapper a{
+        font-size:12px;
+        color:yellow;
+    }
+    .wrapper button{
+        padding: 5px;
+        width:100px;
+        font-size:15px;
+        background-color: yellow;
+        font-weight: bold;
+        border-radius:10px;
+        margin-top:10px;
+    }
+    .wrapper button:hover{
+        background:rgb(230, 226, 7);
+    }
+    .wrapper_off{
+        display: none;
+    }
+    /*################################################*/
+
+    /*Cadastro */
+    .wrapper_cadastro{
+        display:none;
+        position: absolute;
+        align-items: center;
+        top:30%;
+        left:55%;
+        background: rgba(0, 0, 0, 0.9);
+        padding:15px;
+        width:300px;
+        height:auto;
+        color:yellow;
+        border-radius:10px;
+        
+    }
+    .wrapper_cadastro_active{
+        display: block;
+    }
+    .wrapper_cadastro i{
+        font-size:25px;
+    }
+
+    .wrapper_cadastro h1{
+        letter-spacing: 0.5px;
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    .wrapper_cadastro input{
+        margin-bottom:10px;
+        padding:5px;
+        border-radius:10px;
+        width:250px;
+    }
+    .wrapper_cadastro a{
+        font-size:12px;
+        color:yellow;
+    }
+    .wrapper_cadastro button{
+        padding: 5px;
+        width:100px;
+        font-size:15px;
+        background-color: yellow;
+        font-weight: bold;
+        border-radius:10px;
+        margin-top:10px;
+    }
+    .wrapper_cadastro button:hover{
+        background:rgb(230, 226, 7);
+    }
+}
+/*#######################################################################*/
+
+/* Painel */
+@media screen and (min-width:1255px) {
+    #painel_home{
+        background:#fcffff;
+        width:80%;
+        height:520px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+    #img_painel{
+        width: 618px;
+        transform: translateX(-5%);
+    }
+    #home{
+        display:block;
+    }
+    #home p{
+        font-size: 50px;
+    }
+    #navbar{
+        float: left;
+        padding:10px;
+        background:black;
+        height:500px;
+        color:yellow;
+    }
+    #navbar h1{
+        font-weight: 500;
+        letter-spacing: 0.2px;
+    }
+
+    #navbar ul li{
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        margin:10px 0px;
+        padding:5px;
+        border-bottom: 1px solid #D3D3D3;
+        cursor: pointer;
+    }
+    #navbar ul li:hover{
+        background: rgba(230, 226, 7);
+        color:black;
+        font-weight: bold;
+    }
+    
+
+    #navbar i{
+        position:absolute;
+        top:70%;
+        font-size:100px;
+        transform: translateX(-50%);
+    }
+    #navbar .copy{
+        font-size:20px;
+        top:90%;
+    
+    }
+    .painel{
+        overflow: auto;
+        height: 100%;
+    }
+    /* AGENDAMENTO */
+
+    #agendamento{
+        display:none;
+        margin:5px;
+        padding:5px;
+    } 
+   
+    #agendamento form{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px;
+    }
+    #agendamento form label{
+       margin:10px 0px;
+    }
+
+    .campo  input{
+    
+        height: 30px;
+        width: 200px;
+        margin-bottom: 20px;
+        border: 0.1px  solid black;
+    }
+       
+    .campo2{
+    
+    display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        align-items: center;
+        justify-content: center;
+       }
+    
+       .campo2 textarea{
+    
+        border: 1px  solid black;
+       }
+    
+  
+  
+    #agendamento form button{
+        padding: 10px;
+        width:200px;
+        font-size:20px;
+        background-color: yellow;
+        font-weight: bold;
+        border-radius:10px;
+        margin-top:10px;
+    }
+    #agendamento button:hover{
+        background:rgb(230, 226, 7);
+    }
+    /* PAGINA DE AGENDAMENTOS */
+    #agendamentoPage{
+        display:none;
+    }
+    /*BANHO/TOSA*/
+  
+    #banho{
+        display:none;
+        margin:5px;
+        padding:5px;
+
+    } 
+
+    #banho form{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        flex-direction: column;
+    }
+
+    #banho form label{
+        margin:10px 0px;
+     
+    }
+
+    .banhot input{
+    
+        height: 30px;
+        width: 200px;
+        margin-bottom: 20px;
+        border: 0.1px  solid black;
+    }
+
+   
+    .banho h2{
+        text-align: center;
+        padding: left; 
+    }
+    #banho form button{
+        padding: 10px;
+        width:200px;
+        font-size:20px;
+        background-color: yellow;
+        font-weight: bold;
+        border-radius:10px;
+        margin-top:10px;
+    }
+    #banho button:hover{
+        background:rgb(230, 226, 7);
+
+
+    }
+    /*Mostrar agendamento de banho e tosa*/
+    #banhoPage{
+        display:none;
+    }
+    /*CADASTRO CLIENTES */
+    
+
+    #clientes{
+        display: none;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #clientes form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    #clientes form input{
+        height: 30px;
+        width: 200px;
+        margin-bottom: 20px;
+        border: 0.1px  solid black;
+    }
+    #clientes form button{
+        padding: 10px;
+        width:200px;
+        font-size:20px;
+        background-color: yellow;
+        font-weight: bold;
+        border-radius:10px;
+        margin-top:10px;
+    }
+    #clientes button:hover{
+        background:rgb(230, 226, 7);
+    }
+
+    /*Consultar Clientes */
+    #clientePage , #clienteEdit{
+        display: none;
+    }
+    
+    .showData{
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .showData td, .showData th{
+        padding: 8px;
+        border:1px solid black;
+    }
+
+    .edit form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 31%;
+    }
+
+    .edit form input{
+        height: 30px;
+        width: 200px;
+        margin-bottom: 20px;
+        border: 0.1px  solid black;
+    }
+    .edit  form button, small{
+        padding: 10px;
+        width:200px;
+        font-size:20px;
+        background-color: yellow;
+        font-weight: bold;
+        border-radius:10px;
+        margin-top:10px;
+        border: 1px solid black;
+        
+    }
+    .edit form button:hover , small:hover{
+        background:rgb(230, 226, 7);
+        border:none;
+    }
+
+    #agendamentoEdit form{
+        top:48% !important;
+    }
+
+    #agendamentoEdit button small textarea{
+        border:1px solid black !important;
+    }
+    
+
+    
+}

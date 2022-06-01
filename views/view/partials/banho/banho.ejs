@@ -1,0 +1,29 @@
+<div id="banho">
+    <h2>Agendamento de Banho/Tosa</h2>
+
+    <form action="/banho/agendar" method="post">
+        <div>
+            <div class="banhot">
+                
+                <input type="text" name="dono"  required placeholder="Nome Dono">
+            </div>
+        
+            <div class="banhot">
+
+                <input type="text" name="telefone" placeholder="(11)0000-0000">
+            </div>
+
+            <div class="banhot">
+                
+                <input type="date" name="data">
+            </div>
+
+            
+            <button type="submit">Agendar</button>
+            
+        </div>
+        <br>
+        <small id="btnShowBanho" style="cursor: pointer; width: 180px;border:none"><a style="color:black">Consultar</a></small>
+    </form>
+</div>
+        

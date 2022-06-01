@@ -1,0 +1,52 @@
+<div id="agendamento">
+    <h2>Agendamento veterinário</h2>
+
+    <form action="/agendamentoVet/agendar" method="POST">
+    <div>
+        <div class="campo">
+           
+            <input type="text" name="dono"  required placeholder="Nome Dono"> 
+        </div>
+              
+        <div class="campo">
+
+            <input type="text" name="nomeAnimal" placeholder="Nome Animal">
+        </div>
+            
+        <div class="campo">
+            <input type="text" name="especie" required placeholder="Especie">
+        </div>
+            
+        <div class="campo">
+            <input type="text" name="raca" required placeholder="Raça">
+        </div>
+          
+        <div class="campo">
+            
+            <input type="tel" name="telefone" required placeholder="(11)0000-0000">    
+            
+        </div>
+    </div>
+    <div class="campo2">
+
+        <label for="observacoes">Observações</label>
+
+        <textarea name="observacoes" id="" cols="30" rows="10"></textarea>
+
+        <button type="submit">Agendar</button>
+        
+        <br>
+        <small id="btnShowAgendamentos" style="cursor: pointer; width: 180px;border:none"><a  style="color:black">Consultar</a></small>
+        
+        
+        </div>
+        
+    </div>
+    
+    
+       
+          
+    </form>
+    
+
+</div>

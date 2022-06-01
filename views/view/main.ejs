@@ -1,0 +1,26 @@
+<%- include('./partials/head') %>
+<body>
+    <div id="painel_home">
+       <%- include('./partials/navbar') %>
+       <div class="painel">
+           <div id="home">
+                <p>Sistema de gerenciamento<br><b>LOVEPETSHOP</b></p>
+                <img id="img_painel" name="slide">
+           </div>
+           <%- include('./partials/banho/banho') %>
+           <%- include('./partials/banho/showBanho') %>
+           <%- include('./partials/cliente/clientes') %>
+           <%- include('./partials/cliente/showClientes') %>
+           <%- include('./partials/agendamentovet/showAgendamentos') %>
+           <%- include('./partials/agendamentovet/agendamento') %>
+           
+
+
+       </div>
+    </div>
+    <script src="/js/functions.js"></script>
+    <script src="/js/slider.js"></script>
+
+    
+</body>
+</html>

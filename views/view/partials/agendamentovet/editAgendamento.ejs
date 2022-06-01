@@ -1,0 +1,51 @@
+
+<%- include('../head') %>
+<div class="edit" id="agendamentoEdit">
+    <h2>Agendamento veterinário</h2>
+
+    <form action="/agendamentoVet/update" method="POST">
+    
+        <input type="hidden" name="id" value="<%=cadastros.id%>">
+        
+           
+            <input type="text" name="dono"  value = "<%=cadastros.nomeDono%>" required placeholder="Nome Dono"> 
+    
+              
+        
+
+            <input type="text" name="nomeAnimal" value = "<%=cadastros.nomeAnimal%>" placeholder="Nome Animal">
+    
+            
+        
+            <input type="text" name="especie" value = "<%=cadastros.especie%>" required placeholder="Especie">
+    
+        
+            <input type="text" name="raca" value = "<%=cadastros.raca%>" required placeholder="Raça">
+    
+          
+       
+            
+            <input type="tel" name="telefone" value = "<%=cadastros.telDono%>" required placeholder="Telefone">    
+            
+        
+   
+    
+
+        <label for="observacoes">Observações</label>
+
+        <textarea name="observacoes" id="" cols="30" rows="10" ><%=cadastros.observacoes%></textarea>
+
+        <button type="submit">Atualizar</button>
+        
+        <br>
+        <small style="cursor: pointer; width: 180px;"><a href="/painel" style="color:black">Voltar</a></small>
+        
+
+    
+    
+       
+          
+    </form>
+    
+
+</div>

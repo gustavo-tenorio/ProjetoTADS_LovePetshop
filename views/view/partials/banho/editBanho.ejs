@@ -1,0 +1,33 @@
+<%- include('../head') %>
+<div class="edit">
+    <br>
+    <h2>Agendamento de Banho/Tosa</h2>
+
+    <form action="/banho/update" method="post">
+        <div>
+            <input type="hidden" name="id" value="<%=cadastros.id%>">
+        
+            <div class="banhot">
+                
+                <input type="text" name="dono"  value="<%=cadastros.nomeDono%>"required placeholder="Nome Dono">
+            </div>
+        
+            <div class="banhot">
+
+                <input type="text" name="telefone" value="<%=cadastros.telDono%>" placeholder="(11)0000-0000">
+            </div>
+
+            <div class="banhot">
+                
+                <input type="date" name="data" value="<%=cadastros.dataAgendada%>">
+            </div>
+
+            
+            <button type="submit">Atualizar</button>
+            
+        </div>
+        <br>
+        <small style="cursor: pointer; width: 180px;"><a href="/painel" style="color:black">Voltar</a></small>
+    </form>
+</div>
+        

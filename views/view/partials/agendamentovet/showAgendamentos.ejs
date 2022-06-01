@@ -1,0 +1,39 @@
+<div id="agendamentoPage">
+    <h1>Tabela de consultas agendadas</h1>
+    <br>
+    <table class = "showData">
+        <tr>
+            <th>Nome Dono</th>
+            <th>Nome Animal</th>
+            <th>Telefone Dono</th>
+        </tr>
+        <% vetAgendado.forEach(consultaVet =>{%> 
+        <tr>
+            <td><%=consultaVet.nomeDono%></td>
+            <td><%=consultaVet.nomeAnimal%></td>
+            <td><%=consultaVet.telDono%></td>
+            <td>
+                <a href="/agendamento/edit/<%=consultaVet.id%>" class="editar">Editar</a>
+                <form action="/agendamentoVet/delete" method="POST" style="display: inline;" onsubmit="confirmarDelete(event, this)">
+                    <input type="hidden" value="<%=consultaVet.id%>" name="id">
+                    <button id="deletar">Deletar</button>
+                </form>
+            
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+    
+</div>
+
+<script>
+    function confirmarDelete(event , form){
+        event.preventDefault();
+        let decision = confirm("Você realmente deseja deletar esse cadastro?");
+        if(decision){
+            form.submit();
+        }else{
+            window.alert("Cadastro não deletado!");
+        }
+    } 
+</script>

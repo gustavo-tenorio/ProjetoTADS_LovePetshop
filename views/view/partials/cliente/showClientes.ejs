@@ -1,0 +1,27 @@
+<div id="clientePage">
+    <h1>Tabela de clientes cadastrados</h1>
+    <br>
+    <table class = "showData">
+        <tr>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+        </tr>
+        <% clientes.forEach(cliente =>{%> 
+            <tr>
+                <td><%=cliente.nome%></td>
+                <td><%=cliente.endereco%></td>
+                <td><%=cliente.telefone%></td>
+                <td>
+                    <a href="/cliente/edit/<%=cliente.id%>" class="editar">Editar</a>
+                    <form action="/clientes/delete" method="post" style="display: inline;" onsubmit="confirmarDelete(event, this)">
+                        <input type="hidden" value="<%=cliente.id%>" name="id">
+                        <button id="deletar">Deletar</button>
+                    </form>
+                
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+    
+</div>

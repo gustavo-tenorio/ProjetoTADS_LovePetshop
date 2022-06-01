@@ -1,0 +1,61 @@
+<%- include('./partials/head') %>
+<body id="home">
+   
+    <img id="img_home" src="/img/puppy.png" alt="">
+    
+    <div class="wrapper">
+        <i class="fa fa-paw"></i>
+        <form action="/login" method="POST">
+            
+            <h1>Login</h1>
+            
+            <label for="user">Usuário</label>
+            
+            <input type="text" placeholder="Digite seu nome de usuário" name="user" required ></li>
+    
+            <label for="password">Senha</label>
+            
+            <input type="password" placeholder="********" name="password" required ></li>
+
+            <br>
+            
+            <a style="cursor: pointer;" onclick="showRegisterScreen()">Não tem uma conta ainda? Cadastre-se!</a>
+            
+            <button type="submit">Entrar</button>
+            
+        </form>
+    </div>
+
+    <div class="wrapper_cadastro">
+        <i class="fa fa-paw"></i>
+        <form action="/CadastroFuncionario" method="POST">
+            
+            <h1>Cadastro</h1>
+            
+            <label for="email">Email</label>
+
+            <input type="text" placeholder="Digite seu email" name="email" required >
+
+            <label for="user">Usuário</label>
+            
+            <input type="text" placeholder="Digite seu nome de usuário" name="user" required></li>
+    
+            <label for="password">Senha</label>
+            
+            <input type="password" placeholder="********" name="password" required></li>
+
+            <br>
+            <div class="botoes-cadastro"></div>
+
+                <button type="submit" onclick="succesfulRegister()">Cadastrar</button>
+                <button type="button" onclick="backforLogin()">Voltar</button>
+            
+
+            </div>
+          
+        </form>
+    </div>
+    <script src="/js/functions.js"></script>
+
+</body>
+</html>

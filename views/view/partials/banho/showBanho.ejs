@@ -1,0 +1,39 @@
+<div id="banhoPage">
+    <h1>Tabela de banhos agendados</h1>
+    <br>
+    <table class = "showData">
+        <tr>
+            <th>Nome Dono</th>
+            <th>Telefone Dono</th>
+            <th>Data</th>
+        </tr>
+        <% banhoAgendado.forEach(banho =>{%> 
+        <tr>
+            <td><%=banho.nomeDono%></td>
+            <td><%=banho.telDono%></td>
+            <td><%=banho.dataAgendada%></td>
+            <td>
+                <a href="/banho/edit/<%=banho.id%>" class="editar">Editar</a>
+                <form action="/banho/delete" method="POST" style="display: inline;" onsubmit="confirmarDelete(event, this)">
+                    <input type="hidden" value="<%=banho.id%>" name="id">
+                    <button id="deletar">Deletar</button>
+                </form>
+            
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+    
+</div>
+
+<script>
+    function confirmarDelete(event , form){
+        event.preventDefault();
+        let decision = confirm("Você realmente deseja deletar esse cadastro?");
+        if(decision){
+            form.submit();
+        }else{
+            window.alert("Cadastro não deletado!");
+        }
+    } 
+</script>

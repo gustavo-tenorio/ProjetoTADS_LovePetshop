@@ -1,0 +1,23 @@
+<%- include('../head') %>
+<div class="edit">
+    <br>
+    <h2>Cadastro de Clientes</h2>
+    <form action="/clientes/update" method="post"> 
+        <input type="hidden" name="id" value="<%=cadastros.id%>" >
+        <input type="text" name="nCliente" value="<%=cadastros.nome%>" placeholder="Nome do cliente">
+
+            <input type="text" name="endCliente" value="<%=cadastros.endereco%>" placeholder="Endereço">
+
+
+            <input type="text" name="telCliente" value="<%=cadastros.telefone%>" placeholder="(11)0000-0000">
+            
+            
+            <br>
+            <button type="submit">Atualizar</button>
+            <small style="cursor: pointer; width: 180px;"><a href="/painel" style="color:black">Voltar</a></small>
+
+                 
+    </form>
+    
+    
+</div>
